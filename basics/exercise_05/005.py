@@ -9,7 +9,12 @@ def calcular_media():
 
     print(f"A média final é de {sum(notas) / len(notas)}")
 
-calcular_media()
+
+def main():
+    calcular_media()
+
+if __name__ == "__main__":
+    main()
 
 
 
