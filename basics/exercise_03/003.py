@@ -1,4 +1,5 @@
-##Contagem de votos
+# Contagem de votos
+
 votos = ["A", "B", "A", "C", "C", "A", "C", "C", "B", "A", "E"]
 
 contagem_votos = {}

@@ -1,8 +1,9 @@
+# Número informado
+
 print("--- Número informado ---")
 
 while True:
-
-    try:
+    try: 
         entrada = input("Digite um número: ")
         numero = float(entrada)
         break

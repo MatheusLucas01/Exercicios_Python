@@ -1,4 +1,5 @@
-## Programa que pede as 4 notas bimestrais e calcula a média.
+# Programa que pede as 4 notas bimestrais e calcula a média.
+
 def calcular_media():
     while True:
         try:

@@ -1,10 +1,11 @@
-#Exercicio Número par ou impar
+# Exercicio Número par ou impar
+
 print("** App impar ou par **")
 while True:
     try:
         numero = int(input("Digite um número: "))
         
-        if numero % 2 == 0:
+        if numero % 2 == 0: # Se o resto do número informado dividido por 2 = 0, o número será par
             print("Esse número é par.")
         else:
             print("Esse número é impar.")

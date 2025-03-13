@@ -1,4 +1,4 @@
-## Programa que calcula metros para centímentros 
+# Programa que calcula metros para centímentros 
 
 def metros_para_centimetros():
     while True:
