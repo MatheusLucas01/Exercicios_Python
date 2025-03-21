@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Exercícios de Lógica de Programação em Python 🐍
 
 Este repositório contém uma série de exercícios práticos em Python que estou resolvendo para treinar e aprimorar minhas habilidades em lógica de programação. O foco é entender a fundamentação da programação, aprimorar o raciocínio lógico e praticar o uso de diferentes estruturas de controle e algoritmos.
