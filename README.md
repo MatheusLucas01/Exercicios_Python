@@ -16,5 +16,7 @@ O objetivo deste repositório é criar e resolver exercícios que ajudem a conso
 
 ## 📝 Exercícios
 
-    Os exercícios são organizados em arquivos Python (com a extensão .py), cada um abordando um tema ou conceito específico da lógica de programação. Você pode explorar o repositório para ver as soluções e tentativas que fui criando.
+    Os exercícios são organizados em arquivos Python (com a extensão .py), 
+    cada um abordando um tema ou conceito específico da lógica de programação. 
+    Você pode explorar o repositório para ver as soluções e tentativas que fui criando.
 
