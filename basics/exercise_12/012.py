@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 def calcular_abastecimento():
     preco_gasolina = 2.5
     preco_alcool = 1.90
