@@ -1,56 +1,58 @@
+def calcular_valor_combustivel(litros, preco_litro):
+    if litros <= 0:
+        print("Quantidade de litros deve ser maior que zero!")
+        return None, None
 
-def calcular_abastecimento():
+    if litros <= 20:
+        desconto = litros * preco_litro * 0.03
+    else:
+        desconto = litros * preco_litro * 0.05
+
+    valor_total = (litros * preco_litro) - desconto
+    return valor_total, desconto
+
+def abastecer_gasolina():
     preco_gasolina = 2.5
-    preco_alcool = 1.90
-
     while True:
         try:
-            escolha = int(input("Escolha uma opção: 1 - Gasolina, 2 - Alcool: "))
+            litros = float(input("Quantos litros de gasolina? "))
+            total, desconto = calcular_valor_combustivel(litros, preco_gasolina)
+            if total is not None: # Se o total não for None
+                print(f"\nValor da gasolina: R${total:.2f}")
+                print(f"Você teve um desconto de R${desconto:.2f}")
+                break
+        except ValueError:
+            print("Digite um número válido para a quantidade de litros.")
+
+def abastecer_alcool():
+    preco_alcool = 1.90
+    while True:
+        try:
+            litros = float(input("Quantos litros de álcool? "))
+            total, desconto = calcular_valor_combustivel(litros, preco_alcool)
+            if total is not None:
+                print(f"\nValor do álcool: R${total:.2f}")
+                print(f"Você teve um desconto de R${desconto:.2f}")
+                break
+        except ValueError:
+            print("Digite um número válido para a quantidade de litros.")
+
+def calcular_abastecimento():
+    while True:
+        try:
+            escolha = int(input("Escolha uma opção: 1 - Gasolina, 2 - Álcool: "))
 
             if escolha == 1:
-                gasolina = float(input("Quantos litros de gasolina? "))
-                if gasolina <= 20:
-                    desconto = gasolina * preco_gasolina * 0.03
-                else:
-                    desconto = gasolina * preco_gasolina * 0.05
-                valor_gasolina = (gasolina * preco_gasolina) - desconto
-                print(f"\nValor da gasolina: R${valor_gasolina:.2f}")
+                abastecer_gasolina()
                 break
             elif escolha == 2:
-                alcool = float(input("Quantos litros de álcool? "))
-                # Calculando o desconto do álcool
-                if alcool <= 20:
-                    desconto = alcool * preco_alcool * 0.03  # 3% de desconto sobre o valor total
-                else:
-                    desconto = alcool * preco_alcool * 0.05  # 5% de desconto sobre o valor total
-                valor_alcool = (alcool * preco_alcool) - desconto
-                print(f"Valor do álcool com desconto: R${valor_alcool:.2f}")
+                abastecer_alcool()
+                break
+            else:
+                print("Escolha 1 para Gasolina ou 2 para Álcool.")
 
-
-
-
-            
-
-            if gasolina < 0 or alcool < 0:
-                print("Os valores devem ser positivos.")
-                continue
-
-           
-
-            
-
-            
-
-            total_pagar = valor_gasolina + valor_alcool
-
-            
-            
-            print(f"Desconto aplicado no álcool: R${desconto:.2f}")
-            print(f"Total a pagar: R${total_pagar:.2f}")
-
-            break  # Sai do loop ao finalizar o cálculo
         except ValueError:
-            print("Digite apenas números!")
+            print("Digite apenas números válidos!")
 
 def main():
     calcular_abastecimento()
